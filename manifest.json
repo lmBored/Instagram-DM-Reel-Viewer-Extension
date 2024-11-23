@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram DM Reel Viewer",
+  "version": "1.0",
+  "description": "Enhances Instagram's DM reel viewer to scroll through shared reels only.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
