@@ -1,6 +1,7 @@
 document.addEventListener("click", (event) => {
     // Check if a shared reel is clicked
-    if (event.target.closest(".shared-reel-class")) {
+    const reelElement = event.target.closest(".shared-reel-class");
+    if (reelElement) {
         // Grab all shared reels from the DM conversation
         const reels = document.querySelectorAll(".shared-reel-class");
         
@@ -20,6 +21,7 @@ function customReelViewer(reels) {
             <button id="prev-reel">Previous</button>
             <video src="${reels[index].src}" autoplay></video>
             <button id="next-reel">Next</button>
+            <button id="close-viewer">Close</button>
         </div>
     `;
     document.body.appendChild(overlay);
@@ -32,6 +34,10 @@ function customReelViewer(reels) {
     document.getElementById("prev-reel").onclick = () => {
         index = (index - 1 + reels.length) % reels.length;
         updateReel(reels[index].src);
+    };
+
+    document.getElementById("close-viewer").onclick = () => {
+        document.body.removeChild(overlay);
     };
 
     function updateReel(src) {
