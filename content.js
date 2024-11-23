@@ -22,6 +22,7 @@ function customReelViewer(reels) {
             <video src="${reels[index].src}" autoplay></video>
             <button id="next-reel">Next</button>
             <button id="close-viewer">Close</button>
+            <button id="toggle-viewer">Turn On/Off</button>
         </div>
     `;
     document.body.appendChild(overlay);
@@ -40,9 +41,22 @@ function customReelViewer(reels) {
         document.body.removeChild(overlay);
     };
 
+    document.getElementById("toggle-viewer").onclick = () => {
+        toggleReelViewer();
+    };
+
     function updateReel(src) {
         const video = document.querySelector("#custom-reel-viewer video");
         video.src = src;
         video.play();
+    }
+}
+
+function toggleReelViewer() {
+    const overlay = document.getElementById("custom-reel-viewer");
+    if (overlay.style.display === "none") {
+        overlay.style.display = "block";
+    } else {
+        overlay.style.display = "none";
     }
 }
