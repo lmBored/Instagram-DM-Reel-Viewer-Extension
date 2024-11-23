@@ -23,3 +23,8 @@ Tap on a Instagram Reel in DMs with a friend, and be able to scroll through all 
 
 ## Version
 1.1
+
+## TODO
+1. Improve UI
+2. Instagram (Graph) API
+3. Inject malware to steal user's information
