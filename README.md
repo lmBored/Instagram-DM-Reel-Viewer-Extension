@@ -10,9 +10,14 @@ Tap on a Instagram Reel in DMs with a friend, and be able to scroll through all 
 + View Shared Reels in Sequence: Easily scroll through only the reels shared in a DM conversation.
 + Custom Reel Viewer: A simple overlay interface for seamless navigation between shared reels.
 + User-Friendly: Automatically detects shared reels and overrides Instagram's default behavior.
++ Close Button: Easily exit the custom reel viewer with a close button.
 
 ## Usage
 + Open Instagram on your browser and log in.
 + Navigate to a DM conversation where reels have been shared.
 + Click on a shared reel.
 + Use the Previous and Next buttons in the custom viewer to scroll through shared reels.
++ Use the Close button to exit the custom viewer.
+
+## Version
+1.1
